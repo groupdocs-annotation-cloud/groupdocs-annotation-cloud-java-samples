@@ -18,11 +18,11 @@ public class Annotation_Java_Get_Pages {
 			
 			// Create request object.
 			GetPagesRequest request = new GetPagesRequest();
-			request.setFilePath("annotations\\ten-pages.docx");
-			request.setCountPagesToConvert(1);
-			request.setEnableCaching(false);
-			request.setCacheStoragePath(null);
-			request.setWithoutAnnotations(true);
+			request.setfilePath("Annotationdocs\\ten-pages.docx");
+			request.setcountPagesToConvert(1);
+			request.setenableCaching(false);
+			request.setcacheStoragePath(null);
+			request.setwithoutAnnotations(true);
 
 			// Executing api method.
 			PageImages response = apiInstance.getPages(request);
@@ -31,47 +31,6 @@ public class Annotation_Java_Get_Pages {
 		} catch (ApiException e) {
 			System.err.println("Exception while calling PreviewApi:");
 			e.printStackTrace();
-		}
-	}
-}
-
-using System;
-using GroupDocs.Annotation.Cloud.Sdk.Api;
-using GroupDocs.Annotation.Cloud.Sdk.Client;
-using GroupDocs.Annotation.Cloud.Sdk.Model;
-using GroupDocs.Annotation.Cloud.Sdk.Model.Requests;
-
-namespace GroupDocs.Annotation.Cloud.Examples.CSharp
-{
-	// Get document pages as images from File
-	class Get_Pages
-	{
-		public static void Run()
-		{
-			var configuration = new Configuration(Common.MyAppSid, Common.MyAppKey);
-			var apiInstance = new PreviewApi(configuration);
-
-			try
-			{
-				// Set request.
-				var request = new GetPagesRequest()
-				{
-					filePath = "Annotationdocs\\ten-pages.docx",
-					password = null,
-					pageNumber = 1,
-					countPagesToConvert = 1,
-					enableCaching = false,
-					cacheStoragePath = null,
-					withoutAnnotations = true
-				};
-
-				var response = apiInstance.GetPages(request);
-				Console.WriteLine("Expected response type is PageImages: " + response.ToString());
-			}
-			catch (Exception e)
-			{
-				Console.WriteLine("Exception while calling Annotation PreviewApi: " + e.Message);
-			}
 		}
 	}
 }

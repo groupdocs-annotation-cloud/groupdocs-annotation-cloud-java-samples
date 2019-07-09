@@ -1,9 +1,7 @@
 package examples.Working_With_Annotations;
 
 import com.groupdocs.cloud.annotation.client.*;
-import com.groupdocs.cloud.annotation.model.*;
 import com.groupdocs.cloud.annotation.model.requests.*;
-import java.io.File;
 import com.groupdocs.cloud.annotation.client.Configuration;
 import com.groupdocs.cloud.annotation.api.*;
 import examples.Utils;
@@ -17,8 +15,7 @@ public class Annotation_Java_Delete_Annotation {
 		try {
 			
 			// Create request object.
-			DeleteAnnotationsRequest request = new DeleteAnnotationsRequest();
-			request.setFilePath("annotations\\ten-pages.docx");
+			DeleteAnnotationsRequest request = new DeleteAnnotationsRequest("Annotationdocs\\ten-pages.docx");
 
 			// Executing api method.
 			apiInstance.deleteAnnotations(request);

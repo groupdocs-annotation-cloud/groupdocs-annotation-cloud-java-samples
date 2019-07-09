@@ -16,8 +16,8 @@ public class Annotation_Java_Upload_File {
 		FileApi apiInstance = new FileApi(Utils.AppSID, Utils.AppKey);
 		try {
 			File fileStream = new File(
-					Paths.get("src\\main\\resources").toAbsolutePath().toString() + "\\annotations\\one-page.docx");
-			UploadFileRequest request = new UploadFileRequest("annotations\\one-page1.docx", fileStream,
+					Paths.get("src\\main\\resources").toAbsolutePath().toString() + "\\Annotationdocs\\one-page.docx");
+			UploadFileRequest request = new UploadFileRequest("Annotationdocs\\one-page1.docx", fileStream,
 					Utils.MYStorage);
 			FilesUploadResult response = apiInstance.uploadFile(request);
 			System.out.println("Expected response type is FilesUploadResult: " + response.getUploaded().size());

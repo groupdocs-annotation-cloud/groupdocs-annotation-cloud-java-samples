@@ -18,7 +18,7 @@ public class Annotation_Java_Get_PDF {
 			
 			// Create request object.
 			GetPdfRequest request = new GetPdfRequest();
-			request.setFilePath("annotations\\ten-pages.docx");
+			request.setfilePath("Annotationdocs\\ten-pages.docx");
 
 			// Executing api method.
 			File response = apiInstance.getPdf(request);

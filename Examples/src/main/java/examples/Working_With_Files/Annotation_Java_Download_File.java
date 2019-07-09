@@ -13,7 +13,7 @@ public class Annotation_Java_Download_File {
 		FileApi apiInstance = new FileApi(Utils.AppSID, Utils.AppKey);
 		try {
 
-			DownloadFileRequest request = new DownloadFileRequest("annotations\\one-page.docx", Utils.MYStorage, null);
+			DownloadFileRequest request = new DownloadFileRequest("Annotationdocs\\two-page.docx", Utils.MYStorage, null);
 			File response = apiInstance.downloadFile(request);
 			System.err.println("Expected response type is File: " + response.length());
 		} catch (ApiException e) {

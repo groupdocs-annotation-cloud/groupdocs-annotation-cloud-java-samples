@@ -1,9 +1,7 @@
 package examples.Working_With_Pages;
 
 import com.groupdocs.cloud.annotation.client.*;
-import com.groupdocs.cloud.annotation.model.*;
 import com.groupdocs.cloud.annotation.model.requests.*;
-import java.io.File;
 import com.groupdocs.cloud.annotation.client.Configuration;
 import com.groupdocs.cloud.annotation.api.*;
 import examples.Utils;
@@ -18,7 +16,7 @@ public class Annotation_Java_Delete_Pages {
 			
 			// Create request object.
 			DeletePagesRequest request = new DeletePagesRequest();
-			request.setFilePath("annotations\\ten-pages.docx");
+			request.setfilePath("Annotationdocs\\ten-pages.docx");
 
 			// Executing api method.
 			apiInstance.deletePages(request);

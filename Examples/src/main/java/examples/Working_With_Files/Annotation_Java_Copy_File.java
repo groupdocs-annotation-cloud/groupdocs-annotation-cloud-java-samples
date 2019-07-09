@@ -12,8 +12,8 @@ public class Annotation_Java_Copy_File {
 		FileApi apiInstance = new FileApi(Utils.AppSID, Utils.AppKey);
 		try {
 
-			CopyFileRequest request = new CopyFileRequest("annotations\\one-page.docx",
-					"annotations\\one-page-copied.docx", Utils.MYStorage, Utils.MYStorage, null);
+			CopyFileRequest request = new CopyFileRequest("Annotationdocs\\two-page.docx",
+					"Annotationdocs\\two-page-copied.docx", Utils.MYStorage, Utils.MYStorage, null);
 			apiInstance.copyFile(request);
 			System.out.println(
 					"Expected response type is Void: 'annotations/one-page1.docx' file copied as 'annotations/one-page-copied.docx'.");

@@ -1,9 +1,9 @@
 package examples.Working_With_Annotations;
 
 import com.groupdocs.cloud.annotation.client.*;
-import com.groupdocs.cloud.annotation.model.*;
 import com.groupdocs.cloud.annotation.model.requests.*;
 import java.io.File;
+
 import com.groupdocs.cloud.annotation.client.Configuration;
 import com.groupdocs.cloud.annotation.api.*;
 import examples.Utils;
@@ -17,13 +17,13 @@ public class Annotation_Java_Get_Annotation {
 		try {
 			
 			// Create request object.
-			GetImportRequest request = new GetImportRequest();
-			request.setFilePath("annotations\\ten-pages.docx");
+			GetExportRequest request = new GetExportRequest();
+			request.setfilePath("Annotationdocs\\one-page-annotated.docx");
 
 			// Executing api method.
-			List<AnnotationInfo> response = apiInstance.GetExport(request);
+			File response = apiInstance.getExport(request);
 
-			System.out.println("Expected response type is List<AnnotationInfo>: " + response);
+			System.out.println("Expected response type is File: " + response.length());
 		} catch (ApiException e) {
 			System.err.println("Exception while calling AnnotateApi:");
 			e.printStackTrace();
