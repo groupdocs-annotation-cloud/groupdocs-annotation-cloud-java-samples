@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.groupds.conversion</groupId>
+  <groupId>com.groupds.annotation</groupId>
   <artifactId>annotation-java-examples</artifactId>
   <version>1.0</version>
   <repositories>
@@ -10,12 +10,12 @@
 	    <url>https://repository.groupdocs.cloud/repo</url>
 	</repository>
 </repositories>
- <dependencies>  	
-	<dependency>
-    	<groupId>com.groupdocs</groupId>
-    	<artifactId>groupdocs-annotation-cloud</artifactId>
-    	<version>19.5</version>
-    	<scope>compile</scope>
-	</dependency>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.groupdocs</groupId>
+  		<artifactId>groupdocs-annotation-cloud</artifactId>
+  		<version>19.5</version>
+  		<scope>runtime</scope>
+  	</dependency>
   </dependencies>
 </project>

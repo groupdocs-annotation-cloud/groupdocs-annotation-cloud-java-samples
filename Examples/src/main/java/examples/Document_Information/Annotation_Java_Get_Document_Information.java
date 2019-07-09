@@ -1,4 +1,4 @@
-package examples.Supported_File_Formats;
+package examples.Document_Information;
 
 import com.groupdocs.cloud.annotation.client.*;
 import com.groupdocs.cloud.annotation.model.*;
@@ -15,7 +15,7 @@ public class Annotation_Java_Get_Document_Information {
 		Configuration configuration = new Configuration(Utils.AppSID, Utils.AppKey);
 		InfoApi apiInstance = new InfoApi(configuration);
 		try {
-			GetInfoRequest request = new GetInfoRequest("annotations\\sample.docx", "");
+			GetInfoRequest request = new GetInfoRequest("Annotationdocs\\two-page.docx", "");
 			
 			DocumentInfo response = apiInstance.getInfo(request);
 

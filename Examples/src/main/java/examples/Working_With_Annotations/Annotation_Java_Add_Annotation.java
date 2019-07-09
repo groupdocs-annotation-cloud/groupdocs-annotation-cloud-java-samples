@@ -2,10 +2,9 @@ package examples.Working_With_Annotations;
 
 import com.groupdocs.cloud.annotation.client.*;
 import com.groupdocs.cloud.annotation.model.*;
+import com.groupdocs.cloud.annotation.model.AnnotationInfo.TypeEnum;
 import com.groupdocs.cloud.annotation.model.requests.*;
-import java.io.File;
 import java.util.Arrays;
-import java.util.List;
 import com.groupdocs.cloud.annotation.client.Configuration;
 import com.groupdocs.cloud.annotation.api.*;
 import examples.Utils;
@@ -21,8 +20,20 @@ public class Annotation_Java_Add_Annotation {
 			// Create annotation/s.
 			AnnotationInfo[] annotations = new AnnotationInfo[1];
 			annotations[0] = new AnnotationInfo();
-			annotations[0].setAnnotationPosition(GetPoint());
-			annotations[0].setBox(GetRectangle());
+			
+
+	        Point pt = new Point();
+	        pt.setX(852.0);
+	        pt.setY(59.388262910798119);
+			annotations[0].setAnnotationPosition(pt);
+			
+			Rectangle r = new Rectangle();
+	        r.setX(375.89276123046875);
+	        r.setY(59.388262910798119);
+	        r.setWidth(88.7330551147461);
+	        r.setHeight(37.7290153503418);
+	
+			annotations[0].setBox(r);
 			annotations[0].setPageNumber(0);
 			annotations[0].setPenColor(1201033);
 			annotations[0].setPenStyle(0);
@@ -31,9 +42,7 @@ public class Annotation_Java_Add_Annotation {
 			annotations[0].setCreatorName("Anonym A.");
 
 			// Create request object.
-			PostAnnotationsRequest request = new PostAnnotationsRequest();
-			request.setFilePath("Annotationdocs\\ten-pages.docx");
-			requestsetAnnotations(Arrays.asList(annotations)); 			
+			PostAnnotationsRequest request = new PostAnnotationsRequest("Annotationdocs\\ten-pages.docx", Arrays.asList(annotations));
 
 			// Executing api method.
 			apiInstance.postAnnotations(request);

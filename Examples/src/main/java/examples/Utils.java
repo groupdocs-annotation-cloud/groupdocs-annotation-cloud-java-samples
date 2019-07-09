@@ -11,8 +11,8 @@ public class Utils {
 	// TODO: Get your AppSID and AppKey at https://dashboard.groupdocs.cloud (free
 	// registration is required).
 
-	public static String AppSID = "XXXXX-XXXXX-XXXXX";
-	public static String AppKey = "XXXXXXX";
+	public static String AppSID = "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX";
+	public static String AppKey = "XXXXXXXXXXXXXXXXXXXX";
 	public static String MYStorage = "XXXXX";
 
 	public static void getFolderFilesPath(String path) {
