@@ -15,10 +15,4 @@ Directory | Description
 --------- | -----------
 [Examples](Examples)  | A collection of Java Cloud SDK examples that help you learn the product features
 
-## Resources
-
-+ **Website:** [www.GroupDocs.cloud](http://www.GroupDocs.cloud)
-+ **Product Home:** [GroupDocs.Annotation Cloud SDK for Java](https://products.groupdocs.cloud/annotation/java)
-+ **Documentation:** [GroupDocs.Annotation Cloud SDK Documentation](https://docs.groupdocs.cloud/display/annotationcloud/Home)
-+ **Free Support:** [GroupDocs.Annotation Cloud SDK Free Support Forum](https://forum.groupdocs.cloud/c/annotation)
-+ **Blog:** [GroupDocs.Annotation Cloud SDK Blog](https://blog.groupdocs.cloud/category/annotation/)
+[Home](https://www.groupdocs.cloud/) | [Product Page](https://products.groupdocs.cloud/annotation/java) | [Docs](https://docs.groupdocs.cloud/annotation/) | [Demos](https://products.groupdocs.app/annotation/family) | [API Reference](https://apireference.groupdocs.cloud/annotation/) | [Source Code](https://github.com/groupdocs-annotation-cloud/groupdocs-annotation-cloud-java) | [Blog](https://blog.groupdocs.cloud/category/annotation/) | [Free Support](https://forum.groupdocs.cloud/c/annotation) | [Free Trial](https://purchase.groupdocs.cloud/trial)
