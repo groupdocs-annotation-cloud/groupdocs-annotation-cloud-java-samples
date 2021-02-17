@@ -33,12 +33,20 @@ public class AddImageAnnotation {
 			annotations[0].setCreatorName("Anonym A.");
 
 			// Create request object.
-			PostAnnotationsRequest request = new PostAnnotationsRequest("Annotationdocs\\one-page.docx", Arrays.asList(annotations));
+			FileInfo fileInfo = new FileInfo();
+			fileInfo.setFilePath("Annotationdocs\\one-page.docx");
+	
+			AnnotateOptions options = new AnnotateOptions();
+			options.setFileInfo(fileInfo);
+			options.setAnnotations(Arrays.asList(annotations));
+			options.setOutputPath("Output/one-page-annotated.docx");
+	
+			AnnotateRequest request = new AnnotateRequest(options);
 
 			// Executing api method.
-			apiInstance.postAnnotations(request);
+			AnnotationApiLink result = apiInstance.annotate(request);
 
-			System.out.println("AddImageAnnotation: image Annotation added.");
+			System.out.println("AddImageAnnotation: image Annotation added: " + result.getTitle());
 		} catch (ApiException e) {
 			System.err.println("Exception while calling AnnotateApi:");
 			e.printStackTrace();

@@ -77,12 +77,20 @@ public class AddMultipleAnnotations {
 			annotations[3].setCreatorName("Anonym A.");
 
 			// Create request object.
-			PostAnnotationsRequest request = new PostAnnotationsRequest("Annotationdocs\\ten-pages.docx", Arrays.asList(annotations));
+			FileInfo fileInfo = new FileInfo();
+			fileInfo.setFilePath("Annotationdocs\\ten-pages.docx");
+	
+			AnnotateOptions options = new AnnotateOptions();
+			options.setFileInfo(fileInfo);
+			options.setAnnotations(Arrays.asList(annotations));
+			options.setOutputPath("Output/ten-pages-annotated.docx");
+	
+			AnnotateRequest request = new AnnotateRequest(options);
 
 			// Executing api method.
-			apiInstance.postAnnotations(request);
+			AnnotationApiLink result = apiInstance.annotate(request);
 
-			System.out.println("AddMultipleAnnotations: Multiple Annotation added.");
+			System.out.println("AddMultipleAnnotations: Multiple Annotation added: " + result.getTitle());
 		} catch (ApiException e) {
 			System.err.println("Exception while calling AnnotateApi:");
 			e.printStackTrace();

@@ -1,21 +1,22 @@
-package examples.AdvancedUsage.AddAnnotations;
+package examples.AdvancedUsage.AddAnnotationsDirect;
 
 import com.groupdocs.cloud.annotation.client.*;
 import com.groupdocs.cloud.annotation.model.*;
-import com.groupdocs.cloud.annotation.model.AnnotationInfo.PenStyleEnum;
-import com.groupdocs.cloud.annotation.model.AnnotationInfo.TypeEnum;
+import com.groupdocs.cloud.annotation.model.AnnotationInfo.*;
 import com.groupdocs.cloud.annotation.model.requests.*;
+import java.io.File;
 import java.util.Arrays;
+
 import com.groupdocs.cloud.annotation.api.*;
 import examples.Constants;
 
-public class AddAreaAnnotation {
+public class AddAnnotationsDirect {
 
 	public static void main(String[] args) {
 
 		AnnotateApi apiInstance = new AnnotateApi(Constants.GetConfiguration());
 		try {
-
+			
 			// Create annotation/s.
 			AnnotationInfo[] annotations = new AnnotationInfo[1];
 			annotations[0] = new AnnotationInfo();
@@ -50,14 +51,13 @@ public class AddAreaAnnotation {
 			AnnotateOptions options = new AnnotateOptions();
 			options.setFileInfo(fileInfo);
 			options.setAnnotations(Arrays.asList(annotations));
-			options.setOutputPath("Output/one-page-annotated.docx");
 	
-			AnnotateRequest request = new AnnotateRequest(options);
+			AnnotateDirectRequest request = new AnnotateDirectRequest(options);
 
 			// Executing api method.
-			AnnotationApiLink result = apiInstance.annotate(request);
+			File response = apiInstance.annotateDirect(request);
 
-			System.out.println("AddAreaAnnotation: Area Annotation added: " + result.getTitle());
+			System.out.println("AddAnnotationsDirect: Document Length: " + response.getTotalSpace());
 		} catch (ApiException e) {
 			System.err.println("Exception while calling AnnotateApi:");
 			e.printStackTrace();

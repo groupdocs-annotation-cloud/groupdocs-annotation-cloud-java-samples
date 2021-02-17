@@ -13,8 +13,10 @@ public class GetDocumentInfo {
 		InfoApi apiInstance = new InfoApi(Constants.GetConfiguration());
 
         try {
-
-			GetInfoRequest request = new GetInfoRequest("Annotationdocs\\one-page.docx", null);
+			FileInfo fileInfo = new FileInfo();
+			fileInfo.setFilePath("Annotationdocs\\one-page.docx");
+			
+			GetInfoRequest request = new GetInfoRequest(fileInfo);
 
 			DocumentInfo response = apiInstance.getInfo(request);
 			System.out.println("GetDocumentInfo: pages count = " + response.getPages().size());

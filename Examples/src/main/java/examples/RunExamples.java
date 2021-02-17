@@ -1,11 +1,11 @@
 package examples;
 
 import examples.AdvancedUsage.AddAnnotations.AddAreaAnnotation;
+import examples.AdvancedUsage.AddAnnotationsDirect.AddAnnotationsDirect;
 import examples.AdvancedUsage.DeleteAnnotations.DeleteAnnotation;
 import examples.AdvancedUsage.DocumentPreview.DeletePages;
 import examples.AdvancedUsage.DocumentPreview.GetPages;
-import examples.AdvancedUsage.ExportDocumentWithAnnotations.GetExportDocument;
-import examples.AdvancedUsage.GetAnnotations.GetAnnotations;
+import examples.AdvancedUsage.ExtractAnnotations.ExtractAnnotations;
 import examples.BasicUsage.*;
 
 
@@ -24,8 +24,8 @@ public class RunExamples {
 		// Advanced examples
 
 		AddAreaAnnotation.main(args);
-		GetAnnotations.main(args);
-		GetExportDocument.main(args);
+		ExtractAnnotations.main(args);
+		AddAnnotationsDirect.main(args);
 		DeleteAnnotation.main(args);
 		GetPages.main(args);
 		DeletePages.main(args);

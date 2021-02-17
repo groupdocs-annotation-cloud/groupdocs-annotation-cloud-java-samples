@@ -6,7 +6,7 @@ public class Constants {
 	// TODO: Get your ClientId and ClientSecret at https://dashboard.groupdocs.cloud (free
 	// registration is required).
 
-	private static String ClientId = "XXXX-XXXX-XXXX-XXXX";
+	private static String ClientId = "XXXXXXXXXXXXXXXX";
 	private static String ClientSecret = "XXXXXXXXXXXXXXXX";
 
 	public static String MYStorage = "First Storage";

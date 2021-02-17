@@ -14,9 +14,14 @@ public class GetPages {
 		try {
 			
 			// Create request object.
-			GetPagesRequest request = new GetPagesRequest();
-			request.setfilePath("Annotationdocs\\one-page.docx");
-
+			FileInfo fileInfo = new FileInfo();
+			fileInfo.setFilePath("Annotationdocs\\one-page.docx");
+			
+			PreviewOptions options = new PreviewOptions();
+			options.setFileInfo(fileInfo);        
+	
+			GetPagesRequest request = new GetPagesRequest(options);
+			
 			// Executing api method.
 			PageImages response = apiInstance.getPages(request);
 

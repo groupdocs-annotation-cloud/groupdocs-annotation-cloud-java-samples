@@ -1,6 +1,7 @@
 package examples.AdvancedUsage.DocumentPreview;
 
 import com.groupdocs.cloud.annotation.client.*;
+import com.groupdocs.cloud.annotation.model.FileInfo;
 import com.groupdocs.cloud.annotation.model.requests.*;
 import com.groupdocs.cloud.annotation.api.*;
 import examples.Constants;
@@ -13,8 +14,9 @@ public class DeletePages {
 		try {
 			
 			// Create request object.
-			DeletePagesRequest request = new DeletePagesRequest();
-			request.setfilePath("Annotationdocs\\one-page.docx");
+			FileInfo fileInfo = new FileInfo();
+			fileInfo.setFilePath("Annotationdocs\\one-page.docx");			
+			DeletePagesRequest request = new DeletePagesRequest(fileInfo);
 
 			// Executing api method.
 			apiInstance.deletePages(request);

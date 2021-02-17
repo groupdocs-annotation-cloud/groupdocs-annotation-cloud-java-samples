@@ -7,14 +7,14 @@
     <repository>
 	    <id>groupdocs-artifact-repository</id>
 	    <name>GroupDocs Artifact Repository</name>
-	    <url>https://repository.groupdocs.cloud/repo</url>
+	    <url>https://repository-qa.groupdocs.cloud/repo</url>
 	</repository>
 </repositories>
   <dependencies>
   	<dependency>
   		<groupId>com.groupdocs</groupId>
   		<artifactId>groupdocs-annotation-cloud</artifactId>
-  		<version>20.10</version>
+  		<version>21.2</version>
   	</dependency>
   </dependencies>
 </project>
